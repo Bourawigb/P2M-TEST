@@ -16,7 +16,13 @@ pipeline {
            '''
          }
       }
-
+   stage('TEST phase') {
+         steps {
+           sh '''
+           echo "testing...."
+           '''
+         }
+      }
     stage('Login') {
       steps {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
