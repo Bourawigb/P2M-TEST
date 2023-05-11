@@ -16,7 +16,7 @@ pipeline {
            '''
          }
       }
-   stage('TEST phase') {
+      stage('TEST phase') {
          steps {
            sh '''
            echo "testing...."
