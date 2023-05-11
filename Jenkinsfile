@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-    DOCKERHUB_CREDENTIALS = credentials('06decbaf-b4e6-4429-8cd3-0778dfa98a25')
+    DOCKERHUB_CREDENTIALS = credentials('docker')
     }
    triggers {
         pollSCM "*/5 * * * *"
