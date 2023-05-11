@@ -12,7 +12,7 @@ pipeline {
       stage('Build Image') {
          steps {
            sh '''
-           docker build -t bourawi/p2m .
+           docker build --network=host -t bourawi/p2m .
            '''
          }
       }
