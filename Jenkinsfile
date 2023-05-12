@@ -12,7 +12,7 @@ pipeline {
       stage('Build Image') {
          steps {
            sh '''
-           docker build --network=host -t bourawi/p2m:latest .
+           docker build --network=host -t bourawi/p2m:$BUILD_NUMBER .
            '''
          }
       }
@@ -32,7 +32,7 @@ pipeline {
       stage('Push Image') {
          steps {
            sh '''
-           docker push bourawi/p2m:latest
+           docker push bourawi/p2m:$BUILD_NUMBER
            '''
          }
       }
