@@ -36,6 +36,13 @@ pipeline {
            '''
          }
       }
+      stage('Deleting Image') {
+         steps {
+           sh '''
+           docker rmi -f bourawi/p2m:$BUILD_NUMBER
+           '''
+         }
+      }
    }
    post {
     always {
